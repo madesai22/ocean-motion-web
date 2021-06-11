@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Code & Methods</title>
+   <link rel="stylesheet" href=style.css>
+   <link rel="stylesheet" href=methods.css>
+</head>
+<body>
+    <!-- <header>
+        <h1 class ="shorttitle">  The Code that we Coded </h1>
+    </header> -->
+   <nav class= "navbar">
+    <div class="title">Methods</div>
+    <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="background.html">Background</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="ML.html">Machine Learning</a></li>
+         </ul>
+       </div>
+      </nav>
+    
+    <nav class= "navbar2">
+        <div class="title2">On this Page</div>
+        <div class="navbar-links2">
+            <ul>
+              <li><a href="#density-dynamic">Density and Dynamic Height Files</a></li>
+              <li><a href="#fortran-shell">Fortran Files and Shell Scripts</a></li>
+              <li><a href="#hovmoller">Creating Hovmoller Diagrams</a></li>
+              <li><a href="#libraries">Python Libraries Used</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+   <main>
+       <h3 id="density-dynamic">Creating Density and Dynamic Height Files</h3>
+           <b>Summary:</b> This code was used to create density and dynamic height files for a set of dates from a NetCDF File.
+           <br><b>Steps:</b>
+        <ol>
+            <li>Imported 5 different libraries: NetCDF, matplotlib.pyplot, numpy, datetime, seawater</li>
+            <li>Established (5) data sets using NetCDF commands</li>
+            <li>Assigned variables to Salinity, Temperature, Depth, and Time</li>
+            <li>Made a for loop to go through and create density and dynamic height files for each date from Jan 6 1993 - Dec 26 2018, using seawater library to compute density</li>
+        </ol>
+ 
+       <h3 id="fortran-shell">Fortran Files and Shell Scripts</h3>
+           <h4>Fortran Files</h4>
+               <b>Summary:</b> We used two fortran code files to change the Density and Dynamic Height Files into Vertical Velocity Files. Fortran is a compiled imperative programming language that is especially suited to numeric computation and scientific computing. Originally developed by IBM in the 1950s for scientific and engineering applications.
+               <br>
+               <img src="./images/fortran.png" alt="a picture of what is described below"><br>
+               For the first fortran file (Vectorq.f) we had 3 inputs: the domain file (which contained information important for calculation), which was consistent for all dates, as well as the density and dynamic height file for the coresponding date.
+               That outputed a few files, the two most important being the average density file and the divergence of q file which were inputed to the second fortran file (omegainv.f) which outputed the Vertical Velocity file.
+ 
+           <h4>Shell Scripts</h4>
+               <b>Summary:</b> The shell script was used to run repetitive tasks using terminal commands that would take hours to complete if we were to manually do it.
+               When running the fortran files, there was only one date being used for data, so we had to change which date was being used and run the fortran code again. This is where Shell Scripts come in. Shell scripts are programs that execute terminal commands as well as other commands such as for loops.
+               <br><b>Steps:</b>
+               <ol>
+                   <li>Create the exe files that will run the fortran code</li>
+                   <li>Read through each date in a specified list and for each date:</li>
+                   <ol type = "a">
+                        <li>Run a python file that creates an exec file for the specified date</li>
+                        <li>Run the created exec files</li>
+                   </ol>
+                </ol>
+          
+       Note: After we had created the vertical velocity data for each date, we turned the data into one NetCDF file for easier access.
+ 
+       <h3 id="hovmoller">Creating Hovmoller Diagrams</h3>
+           <b>Summary:</b> This code takes the vertical velocity data and plots it in a Hovmoller Diagram. A Hovmoller diagram is a way of plotting multiple splices of data to highlight the behavior of the ocean patterns. The axes of Hovmoller diagrams depict changes over time of qualities such as temperature, density, depth, and height. We picked a range of longitudes and displayed the frequencies of eddies over 25 years.
+           <!--WHAT IS A HOVMOLLER DIAGRAM-->
+           <br><b>Steps:</b>
+                <ol>
+                    <li>Import NetCDF4, Matplotlib.pyplot, matplotlib.cm, matplolib.colors.ListedColormap, matplolib.colors.LinearSegmentedColormap, numpy, and datetime</li>
+                    <li>Get data from NetCDF file (the vertical velocity, latitude, longitude, and time)</li>
+                    <li>Get a slice of the data with a single latitude and depth and all of the time and longitude</li>
+                    <li>Plot the slice of data</li>
+                </ol>
+        
+        <h3 id="libraries">Libraries</h3>
+        <ul>
+            <li><b>NetCDF4: </b>This was used to read in our data.</li>
+            <li><b>Matplotlib (pyplot, cm, colors): </b>This was used to plot our data.</li>
+            <li><b>Numpy: </b>This helped us manipulate our data.</li>
+            <li><b>Datetime: </b>This was used to calculate dates.</li>
+            <li><b>Seawater: </b>This was used to calculate density.</li>
+        </ul>
+   </main>
+</body>
+</html>
+
+
+
+<!-- T DO:
+-  code for the jumping page thing
+-  add images
+-  make some of the summaries more robust
+
+
+
+
+-->

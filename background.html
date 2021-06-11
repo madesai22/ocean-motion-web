@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href=style.css>
+    <link rel="stylesheet" href=background.css>
+
+</head>
+
+<body>
+    <header>
+    <h1 class="shorttitle"> Background </h1>
+    </header>
+
+    <nav class= "navbar">
+        <div class="title">Background</div>
+        <div class="navbar-links">
+            <ul>
+              <li><a href="index.html">About</a></li>
+              <li><a href="methods.html">Methods</a></li>
+              <li><a href="results.html">Results</a></li>
+              <li><a href="ML.html">Machine Learning</a></li>
+             </ul>
+           </div>
+          </nav>
+    
+
+  
+        <h2>
+            Goals:
+        </h2>
+        <p>
+            Our goal for this project is to create a comprehensive data set through our python knowledge, so we can predict future eddies by using machine learning. 
+
+        </p>
+      
+        <h2>
+            What are Eddies?:
+        </h2>
+        <p>
+            Ocean eddies are circular currents that move ocean water vertically (think of what happens when water moves around a rock in a river, but on a larger scale). They occur when surface ocean currents bend, causing spirals. We can detect eddies by measuring vertical velocity of the ocean, because they will stand out as points with higher vertical velocity.  
+        </p>
+        <ul> Types of Eddies: </ul>
+        <ul>    - Anticyclonic Eddies (rotate clockwise) </ul>
+        <ul>    - Cyclonic Eddies (rotate anticlockwise) </ul>
+        <ul>    - Mesoscale Eddies (radius of 10-1000 km, slower up and down welling) </ul>
+        <ul>    - Sub-mesoscale Eddies (radius of less than 10 km faster up and down welling) </ul>       
+        <img src="./images/eddiespic.jpg" alt="image of large scale eddies">
+        <h2>
+            Why are Eddies Important?
+        </h2>
+        <p>
+            In the ocean, there are very few things that cause vertical mixing. There are very few places that experience increased mixing of water from the surface and water from the deeper ocean. However, eddies are exceptions to that rule: they cause water to mix vertically across the ocean’s levels. This makes eddies important for scientists to locate and study for two reasons:
+        </p>
+        <ul> - The transfer of nutrients occurring due to vertical mixing in an eddie impacts the biological life in the area, making it a hotspot for many organisms, and a great place to study marine life. </ul>
+
+        <ul> - Vertical mixing also creates a unique environment for chemical reactions, due to the interaction between water with different temperatures and chemical compositions. A process that may be optimized in these conditions is ocean acidification, which is caused by the reaction of carbon (from the atmosphere) and oxygen. Climate scientists are interested in eddies because they may be hotspots for ocean acidification, and thus play a role in climate change.
+        </ul>
+        <img src="./images/up_downwelling.jpg" alt="Upwelling vs downwelling eddies">
+
+        <h2>
+            Getting Our Data:
+        </h2>
+        <ul>Satellite altimetry measures the time it takes for a radar pulse to travel from a satellite in space to the ocean surface. This is where our data came from!  </ul>
+        <img src="./images/satellitealt.png.jpg" alt="satellite altimetry diagram">
+
+        <ul>Our data is in the form of a NetCDF file (Network Common Data Form). It is arranged in the form of an array, meaning it has multiple dimensions, each representing a variable, such as time, depth, latitude or longitude. To sort through this data, we used NetCDF commands.
+        </ul>
+        <img src="./images/netCDF.png" alt="netCDF diagram">
+        <h2>
+            Using Our Data:
+        </h2>
+        <p>The fortran code we used calculated the vertical velocity at all of the datapoints represented in the netCDF file using the Navier-Stokes equation, which requires density and geopotential as inputs.  </p>
+        <img src="./images/navier-stokes.jpg" alt="geoid picture">
+        <ul>The geopotential is a measure of vertical distance in relation to geoid, which is the calculated shape of earth's surface. We imported the geopotential directly from the netCDF file. </ul>
+        <img src="./images/geoid.jpg" alt="equation picture">
+        <ul>We had to calculate the seawater's density based off of other variables found in the netCDF file, since it wasn't already measured. We did this using an equation that takes into account salinity, temperature and depth to find density. </ul>
+
+        <p>
+            
+        </p>
+        
+
+       
+
+
+    
+
+
+    <nav>
+
+    </nav>
+    
+
+    <main>
+
+    </main>
+
+</body>
+</html>

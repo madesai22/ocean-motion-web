@@ -1,0 +1,96 @@
+.cards{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: rgb(15, 212, 203);
+    margin-top: 30px;
+  
+    align-content:space-around;
+
+
+}
+
+.cards div {
+    margin-right: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: auto;
+    
+
+}
+
+
+
+.grouppic{
+    padding-left: 30%;
+    height: 40%;
+    width: 40%;
+    justify-content: center;
+
+}
+
+.card1{
+    background-image: url(./image-background-card1.jpg);
+    
+    
+}
+
+.card2{
+    background-image: url(./image-background-card2.jpg);
+
+}
+
+.card3{
+    background-image: url(./image-background-card3.jpg);
+
+}
+
+.card4{
+    background-image: url(./image-background-card4.jpg);
+
+}
+
+.card5{
+    background-image: url(./image-background-card5.jpg);
+
+}
+
+
+.navbar {display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(39, 71, 144);
+    color: white;}
+
+.title {
+    font-size: 4rem;
+    margin: 1rem;
+}
+.title li {list-style: none;}
+.title1{
+    padding-left: 40%;
+}
+.email{
+    padding-left: 42%;
+}
+.title li a {
+   
+    text-decoration: none;
+           color: white;
+           display: block;}
+/* .title li:hover {background-color: #386B67;} */
+
+
+.navbar-links ul {margin: 0;
+             padding: 0;
+             display: flex;}
+
+.navbar-links li {list-style: none;
+             }
+.navbar-links li a {text-decoration: none;
+               color: white;
+               padding: 2rem;
+               display: block;
+               font-size: 1.5rem
+       }
+.navbar-links li:hover {background-color: rgb(74, 108, 187);;}
