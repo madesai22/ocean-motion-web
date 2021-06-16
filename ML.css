@@ -1,14 +1,5 @@
-.sampletext {
-    font-size: 23;
-}
-
-img{
-    height: 40%;
-    width: 40%;
-}
-
-
-.navbar {display: flex;
+.navbar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(39, 71, 144);
@@ -39,3 +30,32 @@ img{
                font-size: 1.5rem
        }
 .navbar-links li:hover {background-color: rgb(74, 108, 187);;}
+
+.tab1 {
+    padding-left:2%;
+}
+
+.tab2 {
+    padding-left:4%;
+}
+
+img {
+    width:1000px;
+    margin:-50px;
+}
+
+.conv{
+    width:20%;
+    height:20%;
+    margin-top:30px;
+    margin-bottom: 30px;
+    margin-left:-500px;
+}
+
+.train{
+    margin-top:10px;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 10px;
+    margin-left:10px;
+}
